@@ -17,7 +17,10 @@
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addSpecificNumberModal">Add Specific Number</button>
     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeDateModal">Remove Date</button>
 </div>
-
+<div class="mb-2">
+    우리가 매일 30개의 숫자를 확인한다면 3일만에 약 10%의 숫자를 확인할 수 있다.<br/>
+    그리고 그건 굉장한 것이다.
+</div>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -152,6 +155,9 @@ foreach ($files as $k => $v) {
   echo '</button>';
   echo '<br/>';
   $tmp = array_slice($v, 1);
+  $count = count($tmp);
+  echo "우리는 이미 $count 개의 숫자를 확인했다.<br/>";
+  echo "밑은 우리에게 스러져간 숫자들의 명단이다.<br/>";
   sort($tmp);
   foreach($tmp as $data) {
     echo str_pad((string)$data,4,'0',STR_PAD_LEFT);
