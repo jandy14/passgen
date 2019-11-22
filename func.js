@@ -31,4 +31,54 @@ $(document).ready(function () {
     $("#submitForm").on('click', function() {
         $("#contact_form").submit();
     });
+
+    $("#remove_date_form").on("submit", function(e) {
+        var data = $(this).serializeArray();
+        var formURL = $(this).attr("action");
+        console.log(data);
+        console.log(formURL);
+        $.ajax({
+            url: formURL,
+            type: "GET",
+            data: data,
+            success: function(data, textStatus, jqXHR) {
+                $('#removeDateModal .modal-title').html("Result");
+                $('#removeDateModal .modal-body').html(data);
+                $("#submitRemoveDate").remove();
+                console.log(data);
+            },
+            error: function(jqXHR, status, error) {
+                console.log(status + ": " + error);
+            }
+        });
+        e.preventDefault();
+    });
+    $("#submitRemoveDate").on('click', function() {
+        $("#remove_date_form").submit();
+    });
+
+    $("#add_specific_number_form").on("submit", function(e) {
+        var data = $(this).serializeArray();
+        var formURL = $(this).attr("action");
+        console.log(data);
+        console.log(formURL);
+        $.ajax({
+            url: formURL,
+            type: "GET",
+            data: data,
+            success: function(data, textStatus, jqXHR) {
+                $('#addSpecificNumberModal .modal-title').html("Result");
+                $('#addSpecificNumberModal .modal-body').html(data);
+                $("#submitAddSpecificNumber").remove();
+                console.log(data);
+            },
+            error: function(jqXHR, status, error) {
+                console.log(status + ": " + error);
+            }
+        });
+        e.preventDefault();
+    });
+    $("#submitAddSpecificNumber").on('click', function() {
+        $("#add_specific_number_form").submit();
+    });
 });

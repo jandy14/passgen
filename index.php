@@ -28,7 +28,7 @@
         <form id="contact_form" action="./adddate.php" method="GET">
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Date</label>
-            <input type="text" name="date" class="form-control" id="recipient-name">
+            <input type="text" name="date" class="form-control">
           </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">Number</label>
@@ -43,6 +43,63 @@
     </div>
   </div>
 </div>
+
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#addSpecificNumberModal">Add Specific Number</button>
+
+<div class="modal fade" id="addSpecificNumberModal" tabindex="-1" role="dialog" aria-labelledby="addSpecificNumberModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Specific Number</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="add_specific_number_form" action="./addspecificnumber.php" method="GET">
+          <div class="form-group">
+              <label for="date-name" class="col-form-label">Date to add</label>
+              <input type="text" name="date" class="form-control">
+              <label for="date-name" class="col-form-label">Number to add</label>
+              <input type="text" name="number" class="form-control">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" id="submitAddSpecificNumber" class="btn btn-success">Add Number</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeDateModal">Remove Date</button>
+
+<div class="modal fade" id="removeDateModal" tabindex="-1" role="dialog" aria-labelledby="removeDateModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Remove Date</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="remove_date_form" action="./removedate.php" method="GET">
+          <div class="form-group">
+            <label for="date-name" class="col-form-label">Date to remove</label>
+            <input type="text" name="date" class="form-control">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" id="submitRemoveDate" class="btn btn-danger">Remove Date</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <?php
 $dir = "/var/www/html/passgen/history";
 
