@@ -12,8 +12,11 @@
   </head>
   <body>
     <h2>컴퓨터께서 행운의 숫자를 주실지니!!</h2>
-
+<div class="mb-4">
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add date</button>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addSpecificNumberModal">Add Specific Number</button>
+    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeDateModal">Remove Date</button>
+</div>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -44,8 +47,6 @@
   </div>
 </div>
 
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#addSpecificNumberModal">Add Specific Number</button>
-
 <div class="modal fade" id="addSpecificNumberModal" tabindex="-1" role="dialog" aria-labelledby="addSpecificNumberModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -72,8 +73,6 @@
     </div>
   </div>
 </div>
-
-<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeDateModal">Remove Date</button>
 
 <div class="modal fade" id="removeDateModal" tabindex="-1" role="dialog" aria-labelledby="removeDateModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
