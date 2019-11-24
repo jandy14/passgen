@@ -38,7 +38,7 @@
           </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">Number</label>
-            <input type="text" name="number" class="form-control">
+            <input type="number" name="number" class="form-control">
           </div>
         </form>
       </div>
@@ -65,7 +65,7 @@
               <label for="date-name" class="col-form-label">Date to add</label>
               <input type="text" name="date" class="form-control">
               <label for="date-name" class="col-form-label">Number to add</label>
-              <input type="text" name="number" class="form-control">
+              <input type="number" name="number" class="form-control">
           </div>
         </form>
       </div>
