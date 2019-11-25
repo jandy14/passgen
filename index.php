@@ -18,8 +18,9 @@
     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeDateModal">Remove Date</button>
 </div>
 <div class="mb-2">
-    우리가 매일 30개의 숫자를 확인한다면 3일만에 약 10%의 숫자를 확인할 수 있다.<br/>
-    그리고 그건 굉장한 것이다.
+    우리가 30개의 숫자를 확인한다면 3%의 확률로 당첨될 수 있다.<br/>
+    이틀동안 하면 5.91% 삼일은 8.73% ..10일은 26.28% 15일은 37.67%이다.<br/>
+    그리고 우리는 50개 이상도 확인 가능하고 그렇게 15일동안 한다면 53.67%의 확률로 당첨될 수 있다.
 </div>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
