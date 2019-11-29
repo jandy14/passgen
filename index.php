@@ -16,6 +16,7 @@
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add date</button>
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addSpecificNumberModal">Add Specific Number</button>
     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeDateModal">Remove Date</button>
+    <button type="button" id="archiveButton" class="btn btn-info">Archive</button>
 </div>
 <div class="mb-2">
     우리가 30개의 숫자를 확인한다면 3%의 확률로 당첨될 수 있다.<br/>
@@ -130,6 +131,7 @@ while (false !== ($filename = readdir($handle))) {
 }
 // 핸들 해제
 closedir($handle);
+ksort($files);
 echo '<nav>';
 echo '<div class="nav nav-tabs" id="nav-tab" role="tablist">';
 $index = 0;

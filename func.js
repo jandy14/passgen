@@ -82,3 +82,6 @@ $(document).ready(function () {
         $("#add_specific_number_form").submit();
     });
 });
+document.getElementById("archiveButton").onclick = function () {
+    location.href = "https://mit-games.kr/passgen/archive.php";
+};
